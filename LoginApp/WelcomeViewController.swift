@@ -11,11 +11,11 @@ class WelcomeViewController: UIViewController {
 
     @IBOutlet var welcomeLabel: UILabel!
     
-    var welcomeUser: String!
+    var transmittedUserName: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        welcomeLabel.text = welcomeUser
+        welcomeLabel.text = "Welcome \(transmittedUserName ?? "")"
         makesLayerGradient()
     }
     private func makesLayerGradient() {
